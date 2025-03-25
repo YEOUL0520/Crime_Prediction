@@ -12,21 +12,24 @@
 <br>
 
 ## 📆 개발 기간
-* 24.10.18일 - 
+ver 1. * 24.10.18 - 24.12.13(류효정, 이새연)
+ver 2. * 25.03.27 - 
 
 ### 🧑‍💻 팀 구성
  - 팀장  : 류효정 - 
  - 팀원  : 이새연 - 
+ - 팀원  : 김현진 -
 
 ### ⚙️ 개발 환경
 - `python 3.13.1`
 - **IDE** : VS code 1.96.2
-- **Framework** : 
+- **Framework** : FastAPI
 - **Database** : 
 - **ORM** : 
 
 ## 📌 주요 기능
-#### 로그인 - <a href="link here" >상세보기 - WIKI 이동</a>
-- DB값 검증
-- ID찾기, PW찾기
-- 로그인 시 쿠키(Cookie) 및 세션(Session) 생성
+#### 객체 검출 기능</a>
+- 서버에서 Yolov11 model 불러옴
+- 학습에 이용한 데이터셋 : 
+- 불러온 model을 실시간 video에 적용
+- person, knife 두 개의 class 검출
