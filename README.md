@@ -24,7 +24,7 @@ ver 2. * 25.03.27 -
 - **IDE** : VS code 1.96.2
 - **Framework** : FastAPI
 - **Database** : 
-- **ORM** : 
+- **ORM** :
 <br>
 <br>
 ## 📌 주요 기능
