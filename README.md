@@ -20,9 +20,9 @@ ver 2. * 25.03.27 -
  - 팀원  : 김현진 -
 
 ### ⚙️ 개발 환경
-- `python 3.13.1`
-- **IDE** : VS code 1.96.2
-- **Framework** : FastAPI
+- `python 3.13.1`,
+- **IDE** : `VS code 1.96.2`
+- **Framework** : `FastAPI`
 - **Database** : 
 - **ORM** :
 <br>
