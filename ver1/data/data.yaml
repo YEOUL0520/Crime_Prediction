@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['knife']
+
+roboflow:
+  workspace: work-4iofb
+  project: new_knife
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/work-4iofb/new_knife/dataset/3
