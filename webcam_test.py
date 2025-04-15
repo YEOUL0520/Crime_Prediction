@@ -17,7 +17,7 @@ cap3 = cv2.VideoCapture(2)
 CONFIDENCE=0.5
 LABEL_COLORS = {"Person": (0, 255, 0), "Knife": (0, 0, 255)}
 
-def detect_objects(frame, models_labels):
+def detect_objects(frame, models_labels): #객체 탐지 함수
     for model, label in models_labels:
         results = model.predict(frame, conf = CONFIDENCE, classes=[0])
         for box in results[0].boxes:
@@ -57,6 +57,7 @@ while True:
     person_results2 = person_model.predict(frame2, conf=0.35, classes=[0])
     knife_results2 = knife_model.predict(frame2, conf=0.35, classes=[0])
 
+    # 웹캠 3에 대해 YOLO 객체 탐지
     person_results3 = person_model.predict(frame3, conf=0.35, classes=[0])
     knife_results3 = knife_model.predict(frame3, conf=0.35, classes=[0])
 
@@ -70,7 +71,7 @@ while True:
     frame2 = detect_objects(frame2, [(person_model, "Person"), (knife_model, "Knife")])
     frame3 = detect_objects(frame3, [(person_model, "Person"), (knife_model, "Knife")])
 
-    # 두 웹캠의 결과를 화면에 출력
+    # 세 웹캠의 결과를 화면에 출력
     cv2.imshow("Webcam 1 - YOLO Object Detection", frame1)
     cv2.imshow("Webcam 2 - YOLO Object Detection", frame2)
     cv2.imshow("Webcam 3 - YOLO Object Detection", frame3)
