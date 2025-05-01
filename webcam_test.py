@@ -3,8 +3,8 @@ from ultralytics import YOLO
 
 
 # 모델 로드 (COCO 사전 학습 모델 & 커스텀 나이프 모델)
-person_model = YOLO("yolo11s.pt")  # 사람 탐지 (COCO 모델)
-knife_model = YOLO("best(v11ep100).pt")  # 나이프 탐지 (커스텀 모델)
+person_model = YOLO("yolo11n.pt")  # 사람 탐지 (COCO 모델)
+knife_model = YOLO("customknife_v1.1.pt")  # 나이프 탐지 (커스텀 모델)
 
 # 커스텀 라벨 정의
 custom_labels = {0: "Person", 1: "Knife"}
