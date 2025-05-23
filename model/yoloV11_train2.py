@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from roboflow import Roboflow
 import torch
 
-# Roboflow 데이터셋 다운로드 (코드 사용)
+# Roboflow 데이터셋 다운로드, 데이터셋 ver.2
 rf = Roboflow(api_key="arQQJlhQp5Z2aUNJ6kBj")
 project = rf.workspace("work-4iofb").project("knife-detection-bstjz-2k6wu")
 version = project.version(2)
@@ -12,13 +12,13 @@ dataset = version.download("yolov11")
 # 모델 import
 model = YOLO("yolo11n.pt") 
 
-# 모델 학습
+# 모델 학습 (gpu 사용, 환경에서 학습습)
 model.train(
     data=dataset.location + "/data.yaml",
     epochs=100,
     imgsz=960,
     batch=16,
-    device="cuda" if torch.cuda.is_available() else "cpu",
+    device="cuda",
     augment=True,
     degrees=10,
     translate=0.1,
@@ -31,7 +31,7 @@ model.train(
     optimizer="AdamW"
 )
 
-# 모델 저장
+# 모델 저장 (v1.2)
 model.save("customknife_v1.2.pt")
 
 # Validation 평가
